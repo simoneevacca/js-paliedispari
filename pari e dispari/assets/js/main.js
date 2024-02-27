@@ -6,37 +6,46 @@ const even = document.getElementById('select-even')
 const numb = document.getElementById('select-number')
 
 
-// al click del tasto leggo i dati inseriti dall'utente
+// al click del tasto...
+play.addEventListener('click', function () {
 
-play.addEventListener('click', function() {
-const userChoice = even.value;
-const userNumb = Number(numb.value);
-console.log(userNumb);
+    // leggo i dati inseriti dall'utente
+    const userChoice = even.value;
+    const userNumber = Number(numb.value);
 
-// genero un numero casuale e lo sommo a quello dell'utente
-const pcNumber = Math.floor(Math.random()*5) +1;
-console.log(pcNumber);
+    
+    // genero il numero casuale del pc
+    const pcNumber = Math.floor(Math.random() * 5) + 1;
 
-const sumNumber = pcNumber + userNumb
-console.log(sumNumber);
+    // verifico se la somma dei due numeri è pari o dispari usando una funzione e determino se ha vinto l'utente
+    if (summIsEvenOrOdd(userNumber, pcNumber) == userChoice ) {
+        
+        return alert(`hai vinto, il numero del computer era ${pcNumber}`)
 
+     } else {
+        
+        return alert(`hai perso, il numero del computer era ${pcNumber}`)
 
-// verifico se è pari o dispri e determinpo se ha vinto l'utente
-
-if (sumNumber % 2 == 0 && userChoice == 'even') {
-    console.log('hai vinto');
-    return alert (`hai vinto, il numero del computer era ${pcNumber}`)
-} else if (sumNumber % 2 != 0 && userChoice == 'shots'){
-    console.log('hai vinto');
-    return alert (`hai vinto, il numero del computer era ${pcNumber}`)
-
-} else {
-    console.log('hai perso');
-    return alert (`hai perso, il numero del computer era ${pcNumber}`)
-
+    }
 }
-}
-) 
+)
 
+
+
+/**
+ somma 2 numeri e verifica se il risultato è pari o dispari* 
+ * @param {number} numb 
+ * @returns {string}
+ */
+function summIsEvenOrOdd(numb1, numb2) {
+    let result;
+    let numb = numb1 + numb2
+    if (numb % 2 == 0) {
+        result = 'even'
+    } else {
+        result = 'odd'
+    }
+    return result
+}
 
 
