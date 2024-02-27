@@ -1,5 +1,6 @@
 //L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). 
+// Sommiamo i due numeri e tabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
 const play = document.getElementById('button')
 const even = document.getElementById('select-even')
@@ -15,7 +16,8 @@ play.addEventListener('click', function () {
 
     
     // genero il numero casuale del pc
-    const pcNumber = Math.floor(Math.random() * 5) + 1;
+    const pcNumber = randomNumber(5)
+    console.log(pcNumber);
 
     // verifico se la somma dei due numeri è pari o dispari usando una funzione e determino se ha vinto l'utente
     if (summIsEvenOrOdd(userNumber, pcNumber) == userChoice ) {
@@ -31,10 +33,10 @@ play.addEventListener('click', function () {
 )
 
 
-
 /**
- somma 2 numeri e verifica se il risultato è pari o dispari* 
- * @param {number} numb 
+ somma due numeri e determina se il risultato è un numero pari o dispari* 
+ * @param {number} numb1 
+ * @param {number} numb2 
  * @returns {string}
  */
 function summIsEvenOrOdd(numb1, numb2) {
@@ -49,3 +51,12 @@ function summIsEvenOrOdd(numb1, numb2) {
 }
 
 
+/**
+ genera un numero casuale da 1 a x* 
+ * @param {number} x 
+ * @returns {number}
+ */
+function randomNumber(x) {
+    const result = Math.floor(Math.random() * x) + 1;
+    return result
+}
