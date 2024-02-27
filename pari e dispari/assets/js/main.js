@@ -9,14 +9,27 @@ const numb = document.getElementById('select-number')
 // al click del tasto leggo i dati inseriti dall'utente
 
 play.addEventListener('click', function() {
-userChoice = even.value;
-userNumb = numb.value;
+const userChoice = even.value;
+const userNumb = Number(numb.value);
+console.log(userNumb);
 
+// genero un numero casuale e lo sommo a quello dell'utente
+const pcNumber = Math.floor(Math.random()*5) +1;
+console.log(pcNumber);
+
+const sumNumber = pcNumber + userNumb
+console.log(sumNumber);
+
+
+// verifico se è pari o dispri e determinpo se ha vinto l'utente
+
+if (sumNumber % 2 ==0) {
+    
+}
 
 }
 ) 
-// genero un numero casuale e lo sommo a quello dell'utente
 
-// verifico se è pari o dispri e determinpo se ha vinto l'utente
+
 
 // faccio apparire un messaggio
