@@ -10,14 +10,15 @@ const numb = document.getElementById('select-number')
 // al click del tasto...
 play.addEventListener('click', function () {
 
+
     // leggo i dati inseriti dall'utente
     const userChoice = even.value;
     const userNumber = Number(numb.value);
 
     
-    // genero il numero casuale del pc
+    // genero il numero casuale del pc con una funzione
     const pcNumber = randomNumber(5)
-    console.log(pcNumber);
+
 
     // verifico se la somma dei due numeri è pari o dispari usando una funzione e determino se ha vinto l'utente
     if (summIsEvenOrOdd(userNumber, pcNumber) == userChoice ) {
