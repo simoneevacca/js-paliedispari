@@ -23,8 +23,12 @@ console.log(sumNumber);
 
 // verifico se è pari o dispri e determinpo se ha vinto l'utente
 
-if (sumNumber % 2 ==0) {
-    
+if (sumNumber % 2 == 0 && userChoice == 'even') {
+    console.log('hai vinto');
+} else if (sumNumber % 2 != 0 && userChoice == 'shots'){
+    console.log('hai vinto');
+} else {
+    console.log('hai perso');
 }
 
 }
