@@ -25,15 +25,18 @@ console.log(sumNumber);
 
 if (sumNumber % 2 == 0 && userChoice == 'even') {
     console.log('hai vinto');
+    return alert (`hai vinto, il numero del computer era ${pcNumber}`)
 } else if (sumNumber % 2 != 0 && userChoice == 'shots'){
     console.log('hai vinto');
+    return alert (`hai vinto, il numero del computer era ${pcNumber}`)
+
 } else {
     console.log('hai perso');
-}
+    return alert (`hai perso, il numero del computer era ${pcNumber}`)
 
+}
 }
 ) 
 
 
 
-// faccio apparire un messaggio
