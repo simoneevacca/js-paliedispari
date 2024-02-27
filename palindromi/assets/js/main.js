@@ -1,29 +1,25 @@
 // Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 
+/**
+ * 
+ * @param {string} word 
+ * @returns {alert}
+ */
+function findPalindromeWord(word) {
 
+    // tranform word in array, revers and reunite
+    const wordArray = word.split('');
+    const wordArrayReverse = wordArray.reverse()
+    const wordReverse = wordArrayReverse.join('');
+    
+    // check if is a palindrome word
+    if (word === wordReverse) {
+        return alert('La parola è palindroma');
+    } else {
+        return alert('la parola non è palindroma');
+    }
 
-// inserire una parola in una variabile
-
-const word = 'avere';
-console.log(word);
-
-// trasformare la parola in un array
-
-const wordArray = word.split('');
-
-// invertire l'ordine dell'array
-
-const wordArrayReverse = wordArray.reverse()
-
-const wordReverse = wordArrayReverse.join('');
-console.log(wordReverse);
-
-// verificare se l'array invertita è uguale a quella originale
-
-if (word === wordReverse) {
-    console.log('ciao');
-} else {
-    console.log('strunz');
 }
 
-//stampare il risultato
+// recalls function
+findPalindromeWord(prompt('insrisci una parola'));
